@@ -19,3 +19,10 @@ a { //Links
     z-index: -2; //Puts behind or in front of other elements
     animation: introload 1.5s forwards;
 }
+.logo {
+    color: white;
+    font-weight: bold;
+    span {
+        color: lightseagreen;
+    } 
+}
