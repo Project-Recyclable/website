@@ -1,6 +1,6 @@
 body {
   margin: 1.5em;
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
 }
 
 a {
@@ -18,8 +18,15 @@ a {
   background-position-y: 20%;
   width: 100%;
   height: 100vh;
-  z-index: -2;
+  z-index: -1;
   -webkit-animation: introload 1.5s forwards;
           animation: introload 1.5s forwards;
 }
-/*# sourceMappingURL=main.css.map */
+
+.logo {
+  color: white;
+  font-weight: bold;
+}
+.logo span {
+  color: lightseagreen;
+}/*# sourceMappingURL=main.css.map */
