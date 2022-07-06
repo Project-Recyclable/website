@@ -1,6 +1,8 @@
 body {
     margin: 1.5em;
     font-family: 'Poppins', sans-serif;
+    color: white;
+    background: #293443;
 }
 a { //Links
     text-decoration: none; //Removes the underline in the linked texts
@@ -12,8 +14,8 @@ a { //Links
     left: 0;
     background: url('../images/hero-img.jpg');
     background-size: cover;
-    background-position-x: 30%;
-    background-position-y: 20%;
+    background-position-x: 50%;
+    background-position-y: 0%;
     width: 100%;
     height: 100vh; //vh means whats currently viewable in the browser 
     z-index: -1; //Puts behind or in front of other elements
@@ -23,6 +25,135 @@ a { //Links
     color: white;
     font-weight: bold;
     span {
-        color: lightseagreen;
+        color: #218D0F;
     } 
 }
+nav {
+    position: fixed;
+    right: 0;
+    top: 0;
+    background: #293443;
+    width: 50%;
+    height: 100vh;
+    z-index: 2;
+    transform: translateX(100%); 
+    transition: transform .5s ease-in-out; 
+
+    ul {
+        list-style-type: none;
+        padding: 0;
+        margin-top: 8em;
+        
+        button {
+            color: #218D0F;
+            padding: .75em 2em;
+            text-align: left;
+            cursor: pointer;
+            background: #293443;
+            width: 100%;
+            font-size: 1.3rem;
+            border: none;
+            
+            &:hover {
+                background: #415269;
+            }
+        }
+
+        a {
+            color: #218D0F;
+            padding: .75em 2em;
+            display: block;
+
+            &:hover {
+                background: #415269;
+            }
+        }
+    }
+}
+header {
+    display: flex;
+    justify-content: space-between; //Spaces evenly between the elements in the header
+
+    svg { //The menu botton
+        width: 2em;
+        margin-top: 0;
+        cursor: pointer;
+        filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(0deg) brightness(100%) contrast(100%)
+    }
+}
+h1 {
+    font-size: 3rem;
+    margin-top: 2em;
+    line-height: 3.3rem;
+}
+section.hero {
+    color: white;
+    height: 90vh;
+    animation: moveDown 1s ease-in-out forwards;
+
+    .down-arrow {
+        position: absolute;
+        right: 5em;
+        bottom: 7em;
+        width: 2em;
+        margin-top: 5em;
+        z-index: -1;
+        animation: moveArrow 1s alternate-reverse infinite;
+    }
+}
+
+.simple-info {
+    img {
+        width: 100%;
+        object-fit: cover; //Instead of reshaping the images it "crops" it to fit the shape of specified width and height
+        position: relative;
+        height: 30em;
+        margin-bottom: 2em;
+    }
+}    
+
+.info-image {
+    display: block;
+    width: 100%;
+    height: 30em;
+}
+
+.overlay {
+    position: relative;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 0%;
+    transition: 0.5s ease;
+    background-color: #218D0F;
+}
+
+.info-pic-a {
+    position: relative;
+}
+
+.info-pic-b {
+    position: relative;
+}
+
+.info-pic-c {
+    position: relative;
+}
+
+.info-pic:hover .overlay {
+    opacity: 1;
+}
+
+.text{
+    color: white;
+    font-size: 1.5rem;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
