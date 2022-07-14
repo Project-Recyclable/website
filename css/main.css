@@ -97,7 +97,7 @@ section.hero {
 section.hero .down-arrow {
   position: absolute;
   right: 5em;
-  bottom: 7em;
+  bottom: 10em;
   width: 2em;
   margin-top: 5em;
   z-index: -1;
@@ -191,4 +191,100 @@ section.hero .down-arrow {
 }
 .guide button:hover {
   background-color: #166108;
+}
+
+@media only screen and (min-width: 680px) {
+  body {
+    margin: 1.5em 5em;
+    font-family: "Poppins", sans-serif;
+  }
+}
+@media only screen and (min-width: 920px) {
+  .menu {
+    display: none;
+  }
+  nav {
+    transform: translateX(0);
+    position: unset;
+    display: block;
+    width: auto;
+    height: auto;
+    background: none;
+  }
+  nav img {
+    display: none;
+  }
+  nav ul {
+    display: flex;
+    margin: 0;
+  }
+  nav ul a {
+    color: white;
+    padding: 0.5em 1.5em;
+    font-size: 0.9rem;
+  }
+  nav ul a:hover {
+    background: none;
+    text-decoration: underline;
+  }
+  nav ul button {
+    color: white;
+    padding: 0.5em 1.5em;
+    cursor: pointer;
+    background: none;
+    width: 100%;
+    font-size: 0.9rem;
+    border: none;
+  }
+  nav ul button:hover {
+    background: none;
+    text-decoration: underline;
+  }
+  .column {
+    display: flex;
+    float: left;
+    width: 30%;
+    padding: 5px;
+  }
+  .pics::after {
+    content: "";
+    clear: both;
+    display: table;
+  }
+}
+@-webkit-keyframes introload {
+  from {
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+            clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+  }
+  to {
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+            clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+  }
+}
+@keyframes introload {
+  from {
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+            clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+  }
+  to {
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+            clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+  }
+}
+@-webkit-keyframes moveArrow {
+  from {
+    transform: translateY(-30px);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+@keyframes moveArrow {
+  from {
+    transform: translateY(-30px);
+  }
+  to {
+    transform: translateY(0);
+  }
 }/*# sourceMappingURL=main.css.map */

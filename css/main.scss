@@ -94,7 +94,7 @@ section.hero {
     .down-arrow {
         position: absolute;
         right: 5em;
-        bottom: 7em;
+        bottom: 10em;
         width: 2em;
         margin-top: 5em;
         z-index: -1;
@@ -185,4 +185,88 @@ section.hero {
         background-color: #166108;
     }
 }
+@media only screen and (min-width: 680px) { //This is for tablet screens
+    body { 
+        margin: 1.5em 5em; 
+        font-family: 'Poppins', sans-serif;
+    }
+} 
 
+@media only screen and (min-width: 920px) { //This is for tablet screens
+    .menu {
+        display: none;
+    }
+    nav {
+        transform: translateX(0);
+        position: unset;
+        display: block;
+        width: auto;
+        height: auto;
+        background: none;
+        img {
+            display: none;
+        }
+
+        ul {
+            display: flex; //Changes the navigation unordered list bar into rows
+            margin: 0; //Resets margin from mobile version
+
+            a {
+                color: white;
+                padding: .5em 1.5em;
+                font-size: .9rem;
+    
+                &:hover {
+                    background: none;
+                    text-decoration: underline;
+                }
+            }
+            button {
+                color: white;
+                padding: .5em 1.5em;
+                cursor: pointer;
+                background: none;
+                width: 100%;
+                font-size: 0.9rem;
+                border: none;
+                
+                &:hover {
+                    background: none;
+                    text-decoration: underline;
+                }
+            }
+        }
+        
+    }
+
+    .column {
+        display: flex;
+        float: left;
+        width: 30%;
+        padding: 5px;
+    }
+    .pics::after{
+        content: "";
+        clear: both;
+        display: table;
+    
+    }
+
+} 
+
+@keyframes introload { //Animation part
+    from {
+        clip-path: polygon(0 0, 100% 0, 100% 0, 0 0); //How the image looks at first
+    }
+    to {
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%); //How the image looks like now
+    }
+}
+@keyframes moveArrow { //Animation part
+    from {
+        transform: translateY(-30px);
+    }
+    to {
+        transform: translateY(0);
+    }
+}
