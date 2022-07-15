@@ -37,7 +37,7 @@ nav {
   position: fixed;
   right: 0;
   top: 0;
-  background: #293443;
+  background: #314561;
   width: 50%;
   height: 100vh;
   z-index: 2;
@@ -50,11 +50,11 @@ nav ul {
   margin-top: 8em;
 }
 nav ul button {
-  color: #218D0F;
+  color: white;
   padding: 0.75em 2em;
   text-align: left;
   cursor: pointer;
-  background: #293443;
+  background: #314561;
   width: 100%;
   font-size: 1.3rem;
   border: none;
@@ -63,12 +63,39 @@ nav ul button:hover {
   background: #415269;
 }
 nav ul a {
-  color: #218D0F;
+  color: white;
   padding: 0.75em 2em;
   display: block;
 }
 nav ul a:hover {
   background: #415269;
+}
+nav img {
+  cursor: pointer;
+  float: right;
+  margin: 1em;
+  width: 3em;
+  filter: invert(100%);
+}
+
+.active {
+  background-color: green;
+  color: white;
+}
+
+.dropdown-content {
+  display: none;
+  background-color: #314561;
+  padding-left: 8px;
+}
+
+.fa-caret-down {
+  float: right;
+  padding-right: 8px;
+}
+
+.open-nav {
+  transform: translateX(0%);
 }
 
 header {
@@ -76,7 +103,7 @@ header {
   justify-content: space-between;
 }
 header svg {
-  width: 2em;
+  width: 3em;
   margin-top: 0;
   cursor: pointer;
   filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(0deg) brightness(100%) contrast(100%);
@@ -111,6 +138,15 @@ section.hero .down-arrow {
   position: relative;
   height: 30em;
   margin-bottom: 2em;
+}
+.simple-info h3 {
+  font-size: 2rem;
+  margin-top: 0.3em;
+  margin-left: 0.5rem;
+}
+.simple-info p {
+  margin-left: 0.5rem;
+  margin-right: 0.5rem;
 }
 
 .info-pic-a {
@@ -240,16 +276,24 @@ section.hero .down-arrow {
     background: none;
     text-decoration: underline;
   }
-  .column {
-    display: flex;
-    float: left;
-    width: 30%;
-    padding: 5px;
+  nav ul .dropdown {
+    position: absolute;
+    display: inline-block;
   }
-  .pics::after {
-    content: "";
-    clear: both;
-    display: table;
+  nav ul .dropdown-content {
+    display: none;
+    background-color: #166108;
+    z-index: 1;
+  }
+  nav ul .dropdown:hover .dropdown-content {
+    display: block;
+  }
+  .pics {
+    display: flex;
+  }
+  .column {
+    flex: 40%;
+    padding: 10px;
   }
 }
 @-webkit-keyframes introload {

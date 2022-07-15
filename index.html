@@ -15,21 +15,6 @@
         <div class="wrapper">
             <header> <!--The Navigation bar-->
                 <a href="#" class="logo">Beary's<span>Recycling</span>Guide</a>
-                <nav>
-                    <ul>
-                        <li><a href="#">Home</a></li>
-                        <li><a href="#">Guide</a></li>
-                        <li><button class="dropbtn">Items</button>
-                            <li><a href="#">Plastic</a></li>
-                            <li><a href="#">Paper</a></li>
-                            <li><a href="#">Flammable Items</a></li>
-                            <li><a href="#">Clothing</a></li>
-                            <li><a href="#">Electronics</a></li>   
-                        </li>
-                        <li><a href="#">Forum</a></li>
-                        <li><a href="#">About Us</a></li>
-                    </ul>
-                </nav>
                 <svg class = "menu" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 25 17.667">
                     <g id="Group_145" data-name="Group 145" transform="translate(-260.5 -1229.833)">
                       <g id="Icon_feather-menu" data-name="Icon feather-menu" transform="translate(257.5 1222.333)">
@@ -39,6 +24,28 @@
                       </g>
                     </g>
                 </svg>
+                <nav>
+                    <img class= "close" src="images/closing.svg" alt="close-button">
+                    <ul>
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">Guide</a></li>
+                        <li class="dropdown">
+                            <button class="dropbtn">Items
+                                <i class="fa fa-caret-down"></i>
+                            </button>
+                            <ul class="dropdown-content">
+                                <li><a href="#">Plastic</a></li>
+                                <li><a href="#">Paper</a></li>
+                                <li><a href="#">Flammable Items</a></li>
+                                <li><a href="#">Clothing</a></li>
+                                <li><a href="#">Electronics</a></li>
+                            </ul>   
+                        </li>
+                        <li><a href="#">Forum</a></li>
+                        <li><a href="#">About Us</a></li>
+                    </ul>
+                </nav>
+                
             </header>
             
             <section class="hero">
@@ -53,29 +60,32 @@
                 <h3>Three Basic Ideas</h3>
                 <p>Understanding these basic rules in recycling will help you more effectively recycle your materials and help ensure hat everything goes smoothly as you expect it to be.</p>
                 <div class = "pics">
-                    <div class="column">
+                <div class="column">
                     <div class="info-pic-a">
                         <img src="images/recyclables.jpg" alt="Recyclables" class="info-image" style="width:100%">
                         <div class="overlay">
                             <div class="text">Plastic bottles, cans, paper and cardboard materials are very much recycle.</div>
                         </div>
                     </div>
+                </div>
 
-                    <div class="column">
+                <div class="column">
                     <div class="info-pic-b">
                         <img src="images/food-waste.jpg" alt="Food" class="info-image">
                         <div class="overlay">
                             <div class="text">Remove any food and liquid on or in any recycable materials to ensure recycables are recycled.</div>
                         </div>
                     </div>
+                </div>
 
-                    <div class="column">
+                <div class="column">
                     <div class="info-pic-c">
                         <img src="images/plastic-bags.jpg" alt="Plastic" class="info-image">
                         <div class="overlay">
                             <div class="text">Don't recycle any loose plastic bags or have recyclables bagged.</div>
                         </div>
                     </div>
+                </div>
                 <div>
             </section>
 
@@ -84,6 +94,7 @@
                 <button class="guide-btn" onclick="location.href='http://www.google.com'" type="button"> Take a Recycling Quiz</button>
             </section>
         </div>
+        <script src="script.js"></script>
     </body>
 </html>
 

@@ -32,50 +32,72 @@ nav {
     position: fixed;
     right: 0;
     top: 0;
-    background: #293443;
+    background: #314561;
     width: 50%;
     height: 100vh;
     z-index: 2;
     transform: translateX(100%); 
     transition: transform .5s ease-in-out; 
-
     ul {
         list-style-type: none;
         padding: 0;
         margin-top: 8em;
-        
         button {
-            color: #218D0F;
+            color: white;
             padding: .75em 2em;
             text-align: left;
             cursor: pointer;
-            background: #293443;
+            background: #314561;
             width: 100%;
             font-size: 1.3rem;
             border: none;
-            
             &:hover {
                 background: #415269;
             }
         }
-
         a {
-            color: #218D0F;
+            color: white;
             padding: .75em 2em;
             display: block;
-
             &:hover {
                 background: #415269;
             }
         }
     }
+    img { //close button
+        cursor: pointer;
+        float: right; //pushes to the right side
+        margin: 1em;
+        width: 3em;
+        filter: invert(100%) 
+        
+    }
+}
+.active {
+  background-color: green;
+  color: white;
+}
+
+.dropdown-content {
+  display: none;
+  background-color: #314561;
+  padding-left: 8px;
+}
+
+.fa-caret-down {
+  float: right;
+  padding-right: 8px;
+}
+
+.open-nav { //When navigator container has a defined class "open-nav"
+    transform: translateX(0%); //"Reveals" the menu
 }
 header {
     display: flex;
     justify-content: space-between; //Spaces evenly between the elements in the header
 
     svg { //The menu botton
-        width: 2em;
+        width: 3em;
         margin-top: 0;
         cursor: pointer;
         filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(0deg) brightness(100%) contrast(100%)
@@ -109,6 +131,17 @@ section.hero {
         position: relative;
         height: 30em;
         margin-bottom: 2em;
+    }
+
+    h3 {
+        font-size: 2rem;
+        margin-top: 0.3em;
+        margin-left: 0.5rem;
+    }
+
+    p {
+        margin-left: 0.5rem;
+        margin-right: 0.5rem;
     }
 }
 
@@ -192,7 +225,7 @@ section.hero {
     }
 } 
 
-@media only screen and (min-width: 920px) { //This is for tablet screens
+@media only screen and (min-width: 920px) { //This is for PC screens
     .menu {
         display: none;
     }
@@ -235,21 +268,28 @@ section.hero {
                     text-decoration: underline;
                 }
             }
+            .dropdown{
+                position: absolute;
+                display:inline-block;
+            }
+            .dropdown-content{
+                display: none;
+                background-color: #166108;
+                z-index: 1;
+            }
+            .dropdown:hover .dropdown-content{
+                display:block;
+            }
         }
         
     }
 
-    .column {
+    .pics {
         display: flex;
-        float: left;
-        width: 30%;
-        padding: 5px;
     }
-    .pics::after{
-        content: "";
-        clear: both;
-        display: table;
-    
+    .column {
+       flex: 40%;
+       padding: 10px;
     }
 
 } 
