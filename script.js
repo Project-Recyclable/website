@@ -1,17 +1,16 @@
+//Moblie Menu Bar 
 const menu = document.querySelector('.menu');
 const close = document.querySelector('.close');
 const nav = document.querySelector('nav');
-
 menu.addEventListener('click', () => {
     nav.classList.add('open-nav')
 })
-
 close.addEventListener('click', () => {
     nav.classList.remove('open-nav')
 })
 
-
-function myFunction(x) {
+//Mobile Drop Down Bar
+function mobile(x) {
   if (x.matches) { // If media query matches
     var dropdown = document.getElementsByClassName("dropbtn");
     var i;
@@ -27,12 +26,24 @@ function myFunction(x) {
         }
       });
     }
-  } 
+  }
 }
-
 var x = window.matchMedia("(max-width: 920px)")
-myFunction(x) // Call listener function at run time
-x.addListener(myFunction) // Attach listener function on state changes
+mobile(x) // Call listener function at run time
+x.addListener(mobile);  // Attach listener function on state changes
 
 
+//Sticky Nav Bar
+window.onscroll = function() {myFunction()};
+
+var navbar = document.getElementById("navbar");
+var sticky = navbar.offsetTop;
+
+function myFunction() {
+  if (window.pageYOffset >= sticky) {
+    navbar.classList.add("sticky")
+  } else {
+    navbar.classList.remove("sticky");
+  }
+}
 
