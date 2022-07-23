@@ -95,12 +95,12 @@ nav {
 .open-nav { //When navigator container has a defined class "open-nav"
     transform: translateX(0%); //"Reveals" the menu
 }
+
 header {
     display: flex;
     justify-content: space-between; //Spaces evenly between the elements in the header
-    background: #314561;
+    margin: 0px 1.5em;
     padding: 0.5em;
-    margin-top: 0px;
     
     svg { //The menu botton
         width: 3em;
@@ -109,17 +109,6 @@ header {
         filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(0deg) brightness(100%) contrast(100%)
     }
 }
-.sticky {
-    position: fixed;
-    top: 0;
-    width: 100vw;
-    padding: 0.5em 5em;;
-    z-index: 3;
-}
-.sticky + .content {
-    padding-top: 60px;
-}
-
 h1 {
     font-size: 3rem;
     margin-top: 2em;
@@ -248,6 +237,22 @@ section.hero {
     .menu {
         display: none;
     }
+    .navbar {
+        padding: 0.5em 5em;
+        background: #314561;
+    }
+    .sticky {
+        position: fixed;
+        display: flex;
+        width: 100%;
+        justify-content: space-between; //Spaces evenly between the elements in the header
+        background: #314561;
+        padding: 0.5em 5em;
+        margin-top: 0px;
+        top: 0;
+        z-index: 3;
+    }
+
     nav {
         transform: translateX(0);
         position: relative;
@@ -345,10 +350,6 @@ section.hero {
     }
 
 } 
-
-
-
-
 
 @keyframes introload { //Animation part
     from {

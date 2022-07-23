@@ -28,6 +28,7 @@ function mobile(x) {
     }
   }
 }
+
 var x = window.matchMedia("(max-width: 920px)")
 mobile(x) // Call listener function at run time
 x.addListener(mobile);  // Attach listener function on state changes
