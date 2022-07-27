@@ -32,19 +32,3 @@ function mobile(x) {
 var x = window.matchMedia("(max-width: 920px)")
 mobile(x) // Call listener function at run time
 x.addListener(mobile);  // Attach listener function on state changes
-
-
-//Sticky Nav Bar
-window.onscroll = function() {myFunction()};
-
-var navbar = document.getElementById("navbar");
-var sticky = navbar.offsetTop;
-
-function myFunction() {
-  if (window.pageYOffset > sticky) {
-    navbar.classList.add("sticky")
-  } else {
-    navbar.classList.remove("sticky");
-  }
-}
-

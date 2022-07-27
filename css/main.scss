@@ -209,8 +209,8 @@ section.hero {
         position: relative;
         top: 50%;
         left: 50%;
-        font-size: 1.5rem;
         transform: translate(-50%, 0%);
+        font-size: 1.5rem;
         color: white;
         font-weight: medium;
         background-color: #218D0F;
@@ -225,8 +225,8 @@ section.hero {
     }
 }
 @media only screen and (min-width: 680px) { //This is for tablet screens
-    body {  
-        font-family: 'Poppins', sans-serif;
+    header {
+        margin: 0em 5em;
     }
     .wrapper {
         margin: 1.5em 5em;
@@ -325,6 +325,7 @@ section.hero {
     }
     section.hero {
         height: auto;
+        margin-top: 10em;
         margin-bottom: 20em;
         
         p {
