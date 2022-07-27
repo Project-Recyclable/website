@@ -243,19 +243,14 @@ section.hero .down-arrow {
     display: none;
   }
   .navbar {
-    padding: 0.5em 5em;
+    padding: 0.5em 0em;
     background: #314561;
   }
   .sticky {
     position: fixed;
-    display: flex;
     width: 100%;
-    justify-content: space-between;
-    background: #314561;
-    padding: 0.5em 5em;
-    margin-top: 0px;
-    top: 0;
-    z-index: 3;
+    top: 0px;
+    z-index: 1;
   }
   nav {
     transform: translateX(0);
@@ -322,7 +317,7 @@ section.hero .down-arrow {
     background-position-x: 50%;
     background-position-y: 50%;
     width: 100%;
-    height: 57vh;
+    height: 58vh;
   }
   section.hero {
     height: auto;
@@ -334,7 +329,10 @@ section.hero .down-arrow {
   section.hero .down-arrow {
     position: unset;
     float: right;
-    margin-top: 0em;
+    margin-top: -5em;
+  }
+  .simple-info {
+    margin-top: 0.5em;
   }
   .pics {
     display: flex;
@@ -342,6 +340,14 @@ section.hero .down-arrow {
   .column {
     flex: 40%;
     padding: 10px;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  header {
+    margin: 0px 14em;
+  }
+  .wrapper {
+    margin: 1.5em 14em;
   }
 }
 @-webkit-keyframes introload {
@@ -378,5 +384,25 @@ section.hero .down-arrow {
   }
   to {
     transform: translateY(0);
+  }
+}
+@-webkit-keyframes moveDown {
+  from {
+    transform: translateY(-100px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+@keyframes moveDown {
+  from {
+    transform: translateY(-100px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
   }
 }/*# sourceMappingURL=main.css.map */

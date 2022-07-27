@@ -31,7 +31,7 @@ a { //Links
         color: #218D0F;
     } 
 }
-nav {
+nav { //Side-Bar
     position: fixed;
     right: 0;
     top: 0;
@@ -234,25 +234,19 @@ section.hero {
 } 
 
 @media only screen and (min-width: 920px) { //This is for PC screens
-    .menu {
+    .menu { //For Sidebar symbol
         display: none;
     }
     .navbar {
-        padding: 0.5em 5em;
+        padding: 0.5em 0em;
         background: #314561;
     }
     .sticky {
         position: fixed;
-        display: flex;
-        width: 100%;
-        justify-content: space-between; //Spaces evenly between the elements in the header
-        background: #314561;
-        padding: 0.5em 5em;
-        margin-top: 0px;
-        top: 0;
-        z-index: 3;
+        width: 100%; 
+        top: 0px;
+        z-index: 1;
     }
-
     nav {
         transform: translateX(0);
         position: relative;
@@ -322,25 +316,30 @@ section.hero {
             }
         }
     }
+
     .hero-img{
         background-position-x: 50%;
         background-position-y: 50%;
         width: 100%;
-        height: 57vh; //vh means whats currently viewable in the browser 
+        height: 58vh; //vh means whats currently viewable in the browser 
     }
     section.hero {
         height: auto;
+        margin-bottom: 20em;
+        
         p {
             width: 60%;  
         }
-        margin-bottom: 20em;
         .down-arrow {
             position: unset;
             float: right;
-            margin-top: 0em;
+            margin-top: -5em;
         }
     }
 
+    .simple-info {
+        margin-top: 0.5em;
+    }
     .pics {
         display: flex;
     }
@@ -350,6 +349,17 @@ section.hero {
     }
 
 } 
+
+@media only screen and (min-width: 1200px) { 
+    header {
+        margin: 0px 14em;
+    }
+    .wrapper {
+        margin: 1.5em 14em;
+        //margin: 0 auto; //centers entire element/container
+        
+    }
+}
 
 @keyframes introload { //Animation part
     from {
@@ -365,5 +375,15 @@ section.hero {
     }
     to {
         transform: translateY(0);
+    }
+}
+@keyframes moveDown { //Animation part
+    from {
+        transform: translateY(-100px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
     }
 }
