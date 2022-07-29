@@ -118,6 +118,7 @@ h1 {
 
 section.hero {
   color: white;
+  text-align: center;
   height: 90vh;
   -webkit-animation: moveDown 1s ease-in-out forwards;
           animation: moveDown 1s ease-in-out forwards;
@@ -138,6 +139,18 @@ section.hero .down-arrow {
   }
   .wrapper {
     margin: 1.5em 5em;
+  }
+  .do-recycle {
+    padding: 1.5em 5em;
+    background-color: #145609;
+    width: 100%;
+    margin-bottom: 1.5em;
+  }
+  .dont-recycle {
+    padding: 1.5em 5em;
+    background-color: #831c1c;
+    width: 100%;
+    margin-bottom: 1.5em;
   }
 }
 @media only screen and (min-width: 920px) {
@@ -226,8 +239,13 @@ section.hero .down-arrow {
     margin-top: 10em;
     margin-bottom: 20em;
   }
+  section.hero h1 {
+    transform: translate(100%, 0%);
+    width: 40%;
+  }
   section.hero p {
-    width: 60%;
+    transform: translate(100%, 0%);
+    width: 40%;
   }
   section.hero .down-arrow {
     position: unset;
