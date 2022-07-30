@@ -150,17 +150,7 @@ section.hero .down-arrow {
   margin-right: 0.5rem;
 }
 
-.info-pic-a {
-  position: relative;
-  width: 100%;
-}
-
-.info-pic-b {
-  position: relative;
-  width: 100%;
-}
-
-.info-pic-c {
+.info-pic {
   position: relative;
   width: 100%;
 }
@@ -184,15 +174,7 @@ section.hero .down-arrow {
   background-color: #218D0F;
 }
 
-.info-pic-a:hover .overlay {
-  opacity: 1;
-}
-
-.info-pic-b:hover .overlay {
-  opacity: 1;
-}
-
-.info-pic-c:hover .overlay {
+.info-pic:hover .overlay {
   opacity: 1;
 }
 
@@ -216,13 +198,13 @@ section.hero .down-arrow {
   top: 50%;
   left: 50%;
   transform: translate(-50%, 0%);
-  font-size: 1.5rem;
+  font-size: 1.4rem;
   color: white;
   font-weight: medium;
   background-color: #218D0F;
   border: none;
   text-align: center;
-  padding: 20px 25%;
+  padding: 20px 20%;
   border-radius: 100px;
   cursor: pointer;
 }
