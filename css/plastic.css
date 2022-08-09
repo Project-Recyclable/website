@@ -262,14 +262,17 @@ section.hero .down-arrow {
   }
   .do-recycle {
     float: left;
-    width: 80%;
+    width: 90%;
     padding: 1em 0em;
     margin-bottom: 2em;
   }
   .dont-recycle {
     float: right;
-    width: 80%;
+    width: 90%;
     padding: 1em 0em;
+  }
+  .dont-recycle .wrapper {
+    margin-left: 5em;
   }
   .txt-col {
     display: flex;
