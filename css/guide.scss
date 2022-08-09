@@ -8,31 +8,30 @@ body {
     margin: 1.5em;
 }
 a { //Links
-    text-decoration: none; //Removes the underline in the linked texts
-    font-size: 1.3rem; //Always use rem units cause it sizes it relativily
+    text-decoration: none; 
+    font-size: 1.3rem; 
 }
 .hero-img {
     position: absolute;
     top: 0;
     left: 0;
-    background: url('../images/pg-hero-img.jpg');
+    background: url('../images/plastic-bags.jpg');
     background-size: cover;
     background-position-x: 50%;
     background-position-y: 0%;
     width: 100%;
-    height: 100vh; //vh means whats currently viewable in the browser 
-    z-index: -1; //Puts behind or in front of other elements
+    height: 100vh; 
+    z-index: -1; 
     animation: introload 1.5s forwards;
 }
 .logo {
     color: white;
     font-weight: bold;
-
     span {
         color: #218D0F;
     } 
 }
-nav { //Side-Bar
+nav {
     position: fixed;
     right: 0;
     top: 0;
@@ -62,45 +61,44 @@ nav { //Side-Bar
                 background: #415269;
             }
         }
+
         a {
             color: white;
             padding: .75em 2em;
             display: block;
-
             &:hover {
                 background: #415269;
             }
         }
+
         .active {
             background-color: green;
             color: white;
         }
+
         .dropdown-content {
             display: none;
             background-color: #212f42;
             margin: 0px;
             padding-left: 0px;
         }
-        .highlight {
-            background-color: rgb(1, 171, 1);
-        }
     }
     img { //close button
         cursor: pointer;
-        float: right;
+        float: right; 
         margin: 1em;
         width: 3em;
         filter: invert(100%) 
     }
 }
 
-.open-nav { //When navigator container has a defined class "open-nav"
+.open-nav { 
     transform: translateX(0%); //"Reveals" the menu
 }
 
 header {
     display: flex;
-    justify-content: space-between; //Spaces evenly between the elements in the header
+    justify-content: space-between; 
     margin: 0px 1.5em;
     padding: 0.5em;
     
@@ -118,13 +116,12 @@ h1 {
 }
 section.hero {
     color: white;
-    text-align: center;
     height: 90vh;
     animation: moveDown 1s ease-in-out forwards;
 
     .down-arrow {
         position: absolute;
-        right: 5em;
+        left: 5em;
         bottom: 10em;
         width: 2em;
         margin-top: 5em;
@@ -133,23 +130,18 @@ section.hero {
     }
 }
 
-.do-recycle{
-    background-color: #145609;
-    width: 100%;
-    padding: 1em 0em;
-    margin-bottom: 2em;
-    
-}
-.dont-recycle{
-    background-color: #831c1c;
-    width: 100%;
-    padding: 1em 0em;
-}
-.txt-col {
-    ul {
-        margin: 0;
+.simple-info {
+    h3 {
+        font-size: 2rem;
+        margin-top: 0.3em;
+        margin-left: 0.5rem;
+    }
+    p {
+        margin-left: 0.5rem;
+        margin-right: 0.5rem;
     }
 }
+
 
 @media only screen and (min-width: 680px) { //This is for tablet screens
     header {
@@ -185,10 +177,9 @@ section.hero {
         img { //menu bar symbol
             display: none;
         }
-
         ul {
-            display: flex; 
-            margin: 0; 
+            display: flex; //Changes the navigation unordered list bar into rows
+            margin: 0; //Resets margin from mobile version
 
             a {
                 color: white;
@@ -214,10 +205,12 @@ section.hero {
                     text-decoration: underline;
                 }
             }
+            
             .dropdown {
                 float: left;
                 overflow: hidden;
             }
+
             .dropdown-content {
                 display: none;
                 position: absolute;
@@ -230,13 +223,11 @@ section.hero {
                     float: none;
                     padding: 12px 16px;
                     display: block;
-
                     &:hover {
                         background: hsl(215, 31%, 18%);;
                         text-decoration: none;
                     }
                 }
-
             }
             .dropdown:hover .dropdown-content {
                 display: block;
@@ -245,47 +236,27 @@ section.hero {
     }
 
     .hero-img{
+        //float: right;
         background-position-x: 50%;
         background-position-y: 50%;
         width: 100%;
-        height: 75vh; //vh means whats currently viewable in the browser 
+        height: 85vh;
     }
     section.hero {
         height: auto;
         margin-top: 10em;
         margin-bottom: 20em;
-
-        h1 {
-            transform: translate(100%, 0%);
+        
+        h3 {
             width: 40%;
         }
         p {
-            transform: translate(100%, 0%);
             width: 40%;  
         }
         .down-arrow {
             position: unset;
             float: right;
             margin-top: -5em;
-        }
-    }
-    .do-recycle{
-        float: left;
-        width: 80%;
-        padding: 1em 0em;
-        margin-bottom: 2em;
-    }
-    .dont-recycle{
-        float: right;
-        width: 80%;
-        padding: 1em 0em;
-    }
-    .txt-col {
-        display: flex;
-        justify-content: space-between;
-
-        ul {
-            margin: none;
         }
     }
 } 
@@ -296,19 +267,19 @@ section.hero {
     }
     .wrapper {
         margin: 1.5em 14em;
-        //margin: 0 auto; //centers entire element/container
+        //margin: 0 auto;
     }
 }
 
 @keyframes introload { //Animation part
     from {
-        clip-path: polygon(0 0, 100% 0, 100% 0, 0 0); //How the image looks at first
+        clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
     }
     to {
-        clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%); //How the image looks like now
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
     }
 }
-@keyframes moveArrow { //Animation part
+@keyframes moveArrow { 
     from {
         transform: translateY(-30px);
     }
@@ -316,7 +287,7 @@ section.hero {
         transform: translateY(0);
     }
 }
-@keyframes moveDown { //Animation part
+@keyframes moveDown {
     from {
         transform: translateY(-100px);
         opacity: 0;

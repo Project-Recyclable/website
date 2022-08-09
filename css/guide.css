@@ -18,7 +18,7 @@ a {
   position: absolute;
   top: 0;
   left: 0;
-  background: url("../images/pg-hero-img.jpg");
+  background: url("../images/plastic-bags.jpg");
   background-size: cover;
   background-position-x: 50%;
   background-position-y: 0%;
@@ -85,9 +85,6 @@ nav ul .dropdown-content {
   margin: 0px;
   padding-left: 0px;
 }
-nav ul .highlight {
-  background-color: rgb(1, 171, 1);
-}
 nav img {
   cursor: pointer;
   float: right;
@@ -121,14 +118,13 @@ h1 {
 
 section.hero {
   color: white;
-  text-align: center;
   height: 90vh;
   -webkit-animation: moveDown 1s ease-in-out forwards;
           animation: moveDown 1s ease-in-out forwards;
 }
 section.hero .down-arrow {
   position: absolute;
-  right: 5em;
+  left: 5em;
   bottom: 10em;
   width: 2em;
   margin-top: 5em;
@@ -136,21 +132,14 @@ section.hero .down-arrow {
   animation: moveArrow 1s alternate-reverse infinite;
 }
 
-.do-recycle {
-  background-color: #145609;
-  width: 100%;
-  padding: 1em 0em;
-  margin-bottom: 2em;
+.simple-info h3 {
+  font-size: 2rem;
+  margin-top: 0.3em;
+  margin-left: 0.5rem;
 }
-
-.dont-recycle {
-  background-color: #831c1c;
-  width: 100%;
-  padding: 1em 0em;
-}
-
-.txt-col ul {
-  margin: 0;
+.simple-info p {
+  margin-left: 0.5rem;
+  margin-right: 0.5rem;
 }
 
 @media only screen and (min-width: 680px) {
@@ -240,43 +229,23 @@ section.hero .down-arrow {
     background-position-x: 50%;
     background-position-y: 50%;
     width: 100%;
-    height: 75vh;
+    height: 85vh;
   }
   section.hero {
     height: auto;
     margin-top: 10em;
     margin-bottom: 20em;
   }
-  section.hero h1 {
-    transform: translate(100%, 0%);
+  section.hero h3 {
     width: 40%;
   }
   section.hero p {
-    transform: translate(100%, 0%);
     width: 40%;
   }
   section.hero .down-arrow {
     position: unset;
     float: right;
     margin-top: -5em;
-  }
-  .do-recycle {
-    float: left;
-    width: 80%;
-    padding: 1em 0em;
-    margin-bottom: 2em;
-  }
-  .dont-recycle {
-    float: right;
-    width: 80%;
-    padding: 1em 0em;
-  }
-  .txt-col {
-    display: flex;
-    justify-content: space-between;
-  }
-  .txt-col ul {
-    margin: none;
   }
 }
 @media only screen and (min-width: 1200px) {
@@ -342,4 +311,4 @@ section.hero .down-arrow {
     transform: translateY(0);
     opacity: 1;
   }
-}/*# sourceMappingURL=plastic.css.map */
+}/*# sourceMappingURL=guide.css.map */

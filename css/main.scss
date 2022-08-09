@@ -27,6 +27,7 @@ a { //Links
 .logo {
     color: white;
     font-weight: bold;
+
     span {
         color: #218D0F;
     } 
@@ -57,6 +58,7 @@ nav { //Side-Bar
             font-family: 'Poppins', sans-serif;
             font-size: 1.3rem;
             border: none;
+
             &:hover {
                 background: #415269;
             }
@@ -66,6 +68,7 @@ nav { //Side-Bar
             color: white;
             padding: .75em 2em;
             display: block;
+
             &:hover {
                 background: #415269;
             }
@@ -138,19 +141,16 @@ section.hero {
         height: 30em;
         margin-bottom: 2em;
     }
-
     h3 {
         font-size: 2rem;
         margin-top: 0.3em;
         margin-left: 0.5rem;
     }
-
     p {
         margin-left: 0.5rem;
         margin-right: 0.5rem;
     }
 }
-
 .info-pic {
     position: relative;
     width: 100%;
@@ -244,10 +244,10 @@ section.hero {
         img { //menu bar symbol
             display: none;
         }
-
         ul {
             display: flex; //Changes the navigation unordered list bar into rows
             margin: 0; //Resets margin from mobile version
+
             a {
                 color: white;
                 padding: .5em 1.5em;
@@ -290,6 +290,7 @@ section.hero {
                     float: none;
                     padding: 12px 16px;
                     display: block;
+
                     &:hover {
                         background: hsl(215, 31%, 18%);;
                         text-decoration: none;
@@ -307,7 +308,7 @@ section.hero {
         background-position-x: 50%;
         background-position-y: 50%;
         width: 100%;
-        height: 58vh; //vh means whats currently viewable in the browser 
+        height: 75vh; //vh means whats currently viewable in the browser 
     }
     section.hero {
         height: auto;
@@ -323,7 +324,7 @@ section.hero {
             margin-top: -5em;
         }
     }
-
+    
     .simple-info {
         margin-top: 0.5em;
     }
@@ -344,7 +345,6 @@ section.hero {
     .wrapper {
         margin: 1.5em 14em;
         //margin: 0 auto; //centers entire element/container
-        
     }
 }
 
